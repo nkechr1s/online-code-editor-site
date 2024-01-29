@@ -1,7 +1,8 @@
 import { Header as HeaderComponent } from "src/components";
+import { data } from "src/lib/data/headerData";
 
 const Header = () => {
-  return <HeaderComponent title={"Online Code Editor"} />;
+  return <HeaderComponent {...data} />;
 };
 
 export default Header;
