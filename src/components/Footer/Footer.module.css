@@ -1,0 +1,24 @@
+.footer {
+  background-color: #111111;
+  height: 100px;
+  border-top: 1px solid #252525;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footerText {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.footerText a {
+  text-decoration: none;
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+.footerText a:hover {
+  background: linear-gradient(146deg, #fff, #757a7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
