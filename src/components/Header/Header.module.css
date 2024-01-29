@@ -1,0 +1,18 @@
+.navBar {
+  background-color: #111111;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  min-height: 50px;
+  border-bottom: 1px solid #252525;
+}
+
+.link {
+  text-decoration: none;
+}
+.logo {
+  background: linear-gradient(146deg, #fff, #757a7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
