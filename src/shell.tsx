@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
-import { Header, Footer } from "src/components";
+import { Header, Footer } from "src/containers";
 
 const Shell = () => {
   return (
