@@ -1,6 +1,7 @@
 import styles from "./Header.module.css";
+import { headerTypes } from "src/lib/types";
 
-const Header = ({ title }: { title: string }) => {
+const Header = ({ title }: headerTypes) => {
   return (
     <header className={`${styles.navBar} container`}>
       <a className={styles.link} href="/">
