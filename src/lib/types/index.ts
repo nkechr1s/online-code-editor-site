@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 export interface HeaderProps {
   title: string;
 }
@@ -34,4 +35,12 @@ export type HeadingMap = {
 
 export interface HasOwnPropertyFunction {
   (obj: object, prop: string): boolean;
+}
+
+export interface GlobalDataProps {
+  headerData: HeaderProps;
+  heroData: HeroProps;
+}
+export interface GlobalProviderProps {
+  children: ReactNode;
 }

@@ -1,21 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { createContext, useContext, ReactNode } from "react";
+import { createContext, useContext } from "react";
 import { data as headerData } from "src/lib/data/headerData";
 import { data as heroData } from "src/lib/data/heroData";
-import { HeaderProps, HeroProps } from "src/lib/types";
+import { GlobalDataProps, GlobalProviderProps } from "src/lib/types";
 
-interface GlobalData {
-  headerData: HeaderProps;
-  heroData: HeroProps;
-}
-interface GlobalProviderProps {
-  children: ReactNode;
-}
-
-const GlobalContext = createContext<GlobalData | undefined>(undefined);
+const GlobalContext = createContext<GlobalDataProps | undefined>(undefined);
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const useGlobalContext = (): GlobalData => {
+export const useGlobalContext = (): GlobalDataProps => {
   const context = useContext(GlobalContext);
   if (!context) {
     throw new Error("useGlobalContext must be used within a GlobalProvider");
@@ -24,7 +16,7 @@ export const useGlobalContext = (): GlobalData => {
 };
 
 export const GlobalProvider = ({ children }: GlobalProviderProps) => {
-  const globalData: GlobalData = {
+  const globalData: GlobalDataProps = {
     headerData,
     heroData,
   };
