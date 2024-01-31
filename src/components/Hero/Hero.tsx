@@ -8,7 +8,12 @@ const Hero = ({ title, description, buttonText, linkUrl }: HeroTypes) => {
         <h1 aria-label={title} dangerouslySetInnerHTML={{ __html: title }} />
         <h3 arial-label={description}>{description}</h3>
         <div className={styles.heroFeatures}>
-          <Button variant="primary" text={buttonText} href={linkUrl} />
+          <Button
+            variant="primary"
+            text={buttonText}
+            className={styles.btnHero}
+            href={linkUrl}
+          />
         </div>
       </div>
     </div>

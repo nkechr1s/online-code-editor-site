@@ -36,3 +36,8 @@
 .linkHero {
   text-decoration: none;
 }
+
+.btnHero {
+  width: 230px;
+  color: #fff;
+}

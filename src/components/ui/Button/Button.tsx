@@ -14,6 +14,7 @@ const Button = ({
   onClick,
   href,
   customClassName,
+  className: additionalClassName,
   ...props
 }: ButtonProps) => {
   const ButtonComponent = href ? Link : "button";
@@ -22,10 +23,12 @@ const Button = ({
     | React.AnchorHTMLAttributes<HTMLAnchorElement>
     | React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-  const className =
+  const baseClassName =
     variant === "custom"
       ? customClassName || ""
       : buttonClassNames?.[variant] ?? "";
+
+  const className = `${baseClassName} ${additionalClassName ?? ""}`;
   if (href) {
     buttonProps = {
       to: href,
@@ -45,9 +48,11 @@ const Button = ({
   return <ButtonComponent {...(buttonProps as any)}>{text}</ButtonComponent>;
 };
 
-//to use the custom className: <Button variant="custom" customClassName="you-class-name"/>
+//to use the customClassName: <Button variant="custom" customClassName="you-class-name"/>
+//className can extend the styles of buttonClassNames
 Button.defaultProps = {
   customClassName: "",
+  className: "",
 };
 
 export default Button;
