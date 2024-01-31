@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
-import { HeroTypes } from "src/lib/types";
+import { HeroProps } from "src/lib/types";
 import { Button } from "src/components/ui";
-const Hero = ({ title, description, buttonText, linkUrl }: HeroTypes) => {
+const Hero = ({ title, description, buttonText, linkUrl }: HeroProps) => {
   return (
     <div className={styles.hero}>
       <div className={styles.heroCol}>

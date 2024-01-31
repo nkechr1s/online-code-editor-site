@@ -1,13 +1,13 @@
-export type HeaderTypes = {
+export interface HeaderProps {
   title: string;
-};
+}
 
-export type HeroTypes = {
+export interface HeroProps {
   title: string;
   description: string;
   buttonText: string;
   linkUrl: string;
-};
+}
 
 export type ButtonType = "primary" | "secondary" | "custom";
 

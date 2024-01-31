@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
-import { HeaderTypes } from "src/lib/types";
+import { HeaderProps } from "src/lib/types";
 
-const Header = ({ title }: HeaderTypes) => {
+const Header = ({ title }: HeaderProps) => {
   return (
     <header className={styles.navBar}>
       <div className="container">
