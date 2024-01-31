@@ -1,5 +1,5 @@
 import { HeadingProps, HeadingMap } from "src/lib/types";
-import { hasOwnProperty } from "src/utils/headingHelpers";
+import { hasOwnProperty, sanitizeHTML } from "src/utils/headingHelpers";
 
 const headingMap: HeadingMap = {
   h1: "h1",
@@ -27,6 +27,7 @@ const Heading = ({
         <HeadingComponent
           className={className}
           dangerouslySetInnerHTML={{ __html: text }}
+          aria-label={sanitizeHTML(text)}
           {...props}
         />
       );
