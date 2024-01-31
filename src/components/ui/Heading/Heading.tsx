@@ -1,5 +1,5 @@
 import { HeadingProps, HeadingMap } from "src/lib/types";
-import { hasOwnProperty, sanitizeHTML } from "src/utils/headingHelpers";
+import HeadingUtils from "src/lib/common/HeadingUtils";
 
 const headingMap: HeadingMap = {
   h1: "h1",
@@ -17,7 +17,8 @@ const Heading = ({
   dangerouslySetInnerHTML,
   ...props
 }: HeadingProps) => {
-  const isValidVariant = hasOwnProperty(headingMap, variant);
+  // eslint-disable-next-line no-prototype-builtins
+  const isValidVariant = HeadingUtils.hasOwnProperty(headingMap, variant);
   const HeadingComponent = headingMap[variant];
 
   if (isValidVariant) {
@@ -27,7 +28,7 @@ const Heading = ({
         <HeadingComponent
           className={className}
           dangerouslySetInnerHTML={{ __html: text }}
-          aria-label={sanitizeHTML(text)}
+          aria-label={HeadingUtils.sanitizeHTML(text)}
           {...props}
         />
       );
