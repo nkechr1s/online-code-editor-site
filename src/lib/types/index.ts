@@ -25,6 +25,7 @@ export interface HeadingProps {
   variant: string;
   className: string;
   text: string;
+  dangerouslySetInnerHTML?: boolean | { __html: string };
 }
 
 export type HeadingMap = {

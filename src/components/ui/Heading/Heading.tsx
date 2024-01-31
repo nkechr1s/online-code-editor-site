@@ -10,11 +10,28 @@ const headingMap: HeadingMap = {
   h6: "h6",
 };
 
-const Heading = ({ variant, className, text, ...props }: HeadingProps) => {
+const Heading = ({
+  variant,
+  className,
+  text,
+  dangerouslySetInnerHTML,
+  ...props
+}: HeadingProps) => {
   const isValidVariant = hasOwnProperty(headingMap, variant);
   const HeadingComponent = headingMap[variant];
 
   if (isValidVariant) {
+    // If dangerouslySetInnerHTML is true, render text inside dangerouslySetInnerHTML
+    if (dangerouslySetInnerHTML) {
+      return (
+        <HeadingComponent
+          className={className}
+          dangerouslySetInnerHTML={{ __html: text }}
+          {...props}
+        />
+      );
+    }
+    // Otherwise, render text normally
     return (
       <HeadingComponent className={className} {...props}>
         {text}
@@ -22,10 +39,11 @@ const Heading = ({ variant, className, text, ...props }: HeadingProps) => {
     );
   }
 };
-
 Heading.defaultProps = {
   variant: "h1",
   className: "",
+  dangerouslySetInnerHTML: false,
+  text: "",
 };
 
 export default Heading;
