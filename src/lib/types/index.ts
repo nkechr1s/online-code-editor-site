@@ -9,11 +9,12 @@ export type HeroTypes = {
   linkUrl: string;
 };
 
-export type ButtonType = "primary" | "secondary";
+export type ButtonType = "primary" | "secondary" | "custom";
 
 export interface ButtonProps {
   variant: ButtonType;
   text: string;
   onClick?: () => void;
   href?: string;
+  customClassName:string
 }
