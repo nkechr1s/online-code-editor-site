@@ -1,8 +1,8 @@
-export type headerTypes = {
+export type HeaderTypes = {
   title: string;
 };
 
-export type heroTypes = {
+export type HeroTypes = {
   title: string;
   description: string;
   buttonText: string;
