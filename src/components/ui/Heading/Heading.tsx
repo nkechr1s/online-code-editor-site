@@ -33,7 +33,7 @@ const Heading = ({
     }
     // Otherwise, render text normally
     return (
-      <HeadingComponent className={className} {...props}>
+      <HeadingComponent className={className} arial-label={text} {...props}>
         {text}
       </HeadingComponent>
     );

@@ -9,7 +9,6 @@ const Header = ({ title }: HeaderProps) => {
         <a className={styles.link} href="/">
           <Heading
             variant="h1"
-            arial-label={title}
             className={styles.logo}
             text={title}
           />
