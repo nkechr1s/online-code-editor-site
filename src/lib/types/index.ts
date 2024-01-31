@@ -30,3 +30,7 @@ export interface HeadingProps {
 export type HeadingMap = {
   [key: string]: React.ElementType;
 };
+
+export interface HasOwnPropertyFunction {
+  (obj: object, prop: string): boolean;
+}
