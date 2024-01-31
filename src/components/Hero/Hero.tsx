@@ -10,6 +10,7 @@ const Hero = ({ title, description, buttonText, linkUrl }: HeroProps) => {
           variant="h1"
           aria-label={title}
           dangerouslySetInnerHTML={{ __html: title }}
+          text={title}
         />
         <Heading variant="h3" arial-label={description} text={description} />
         <div className={styles.heroFeatures}>
