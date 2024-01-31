@@ -1,6 +1,6 @@
 import { ButtonProps } from "src/lib/types";
-
 import styles from "./Button.module.css";
+
 const buttonClassNames = {
   primary: styles.primaryButton,
   secondary: styles.secondaryButton,
