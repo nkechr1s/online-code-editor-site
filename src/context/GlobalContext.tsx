@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { createContext, useContext, ReactNode } from "react";
+import { createContext, useContext, ReactNode } from "react";
 import { data as headerData } from "src/lib/data/headerData";
 import { data as heroData } from "src/lib/data/heroData";
 import { HeaderProps, HeroProps } from "src/lib/types";
@@ -23,7 +23,7 @@ export const useGlobalContext = (): GlobalData => {
   return context;
 };
 
-export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
+export const GlobalProvider = ({ children }: GlobalProviderProps) => {
   const globalData: GlobalData = {
     headerData,
     heroData,
