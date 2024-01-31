@@ -15,13 +15,11 @@ const Button = ({
   href,
   customClassName,
   className: additionalClassName,
+  target,
   ...props
 }: ButtonProps) => {
-  const ButtonComponent = href ? Link : "button";
-
-  let buttonProps:
-    | React.AnchorHTMLAttributes<HTMLAnchorElement>
-    | React.ButtonHTMLAttributes<HTMLButtonElement>;
+  const isExternalLink = target === "_blank";
+  const ButtonComponent = isExternalLink ? "a" : Link;
 
   const baseClassName =
     variant === "custom"
@@ -29,19 +27,29 @@ const Button = ({
       : buttonClassNames?.[variant] ?? "";
 
   const className = `${baseClassName} ${additionalClassName ?? ""}`;
-  if (href) {
-    buttonProps = {
-      to: href,
-      ...props,
-      className,
-    } as LinkProps;
-  } else {
-    buttonProps = {
-      onClick,
-      ...props,
-      type: "button",
-      className,
-    };
+
+  const commonProps = {
+    className: className,
+    ...props,
+  };
+
+  const externalLinkProps = {
+    href,
+    target,
+    rel: "norefferer nofollow",
+    ...commonProps,
+  } as React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+  const internalLinkProps = {
+    ...(href ? { to: href } : {}),
+    ...commonProps,
+  } as LinkProps;
+
+  const buttonProps = isExternalLink ? externalLinkProps : internalLinkProps;
+
+  if (!isExternalLink && !href) {
+    buttonProps.type = "button";
+    buttonProps.onClick = onClick;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -50,9 +58,11 @@ const Button = ({
 
 //to use the customClassName: <Button variant="custom" customClassName="you-class-name"/>
 //className can extend the styles of buttonClassNames
+//use target="_blank" ton open href in new tab
 Button.defaultProps = {
   customClassName: "",
   className: "",
+  target: "",
 };
 
 export default Button;

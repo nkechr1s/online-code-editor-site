@@ -16,6 +16,7 @@ export interface ButtonProps {
   text: string;
   onClick?: () => void;
   href?: string;
-  customClassName:string
-  className:string
+  customClassName: string;
+  className: string;
+  target: string;
 }
