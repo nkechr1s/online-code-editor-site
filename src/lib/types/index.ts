@@ -20,3 +20,13 @@ export interface ButtonProps {
   className: string;
   target: string;
 }
+
+export interface HeadingProps {
+  variant: string;
+  className: string;
+  text: string;
+}
+
+export type HeadingMap = {
+  [key: string]: React.ElementType;
+};
