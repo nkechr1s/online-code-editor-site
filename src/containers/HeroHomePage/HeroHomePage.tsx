@@ -1,8 +1,9 @@
 import { Hero } from "src/components";
-import { data } from "src/lib/data/heroData";
+import { useGlobalContext } from "src/context/GlobalContext";
 
 const HeroHomePage = () => {
-  return <Hero {...data} />;
+  const { heroData } = useGlobalContext();
+  return <Hero {...heroData} />;
 };
 
 export default HeroHomePage;

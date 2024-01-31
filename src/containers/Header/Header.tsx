@@ -1,8 +1,9 @@
 import { Header as HeaderComponent } from "src/components";
-import { data } from "src/lib/data/headerData";
+import { useGlobalContext } from "src/context/GlobalContext";
 
 const Header = () => {
-  return <HeaderComponent {...data} />;
+  const { headerData } = useGlobalContext();
+  return <HeaderComponent {...headerData} />;
 };
 
 export default Header;
