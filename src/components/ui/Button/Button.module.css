@@ -1,0 +1,43 @@
+.primaryButton {
+  display: block;
+  width: 100%;
+  border: unset;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 30px;
+  color: #fff;
+  background: linear-gradient(180deg, #238aff, #07f);
+  width: 230px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primaryButton:hover {
+  box-shadow: 0 5px 30px -10px #0078ffab;
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+.secondaryButton {
+  display: block;
+  width: 100%;
+  border: unset;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3333333;
+  border-radius: 30px;
+  color: #333;
+  background: #fff;
+  border: 2px solid #238aff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.secondaryButton:hover {
+  box-shadow: 0 5px 30px -10px #0078ffab;
+  filter: brightness(1.05);
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(180deg, #238aff, #07f);
+}
