@@ -7,7 +7,6 @@ import { HeaderProps, HeroProps } from "src/lib/types";
 interface GlobalData {
   headerData: HeaderProps;
   heroData: HeroProps;
-  // Add other data properties with their types
 }
 interface GlobalProviderProps {
   children: ReactNode;
@@ -28,7 +27,6 @@ export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
   const globalData: GlobalData = {
     headerData,
     heroData,
-    // Add other data properties with their values
   };
 
   return (
