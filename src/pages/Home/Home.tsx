@@ -1,9 +1,9 @@
-import { HeroHomePage, CardsGridHomePage } from "src/containers";
+import { Hero, CardsGrid } from "src/containers/home";
 const Home = () => {
   return (
     <>
-      <HeroHomePage />
-      <CardsGridHomePage />
+      <Hero />
+      <CardsGrid />
     </>
   );
 };
