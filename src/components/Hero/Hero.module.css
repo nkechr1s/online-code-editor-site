@@ -1,7 +1,7 @@
 .hero {
   color: #fff;
   padding: 50px 0 100px;
-  height: 325px;
+  margin-bottom: 80px;
 }
 
 .contentHero {
@@ -18,7 +18,7 @@
   gap: 1rem;
 }
 
-.hero h3 {
+.hero h2 {
   color: fff;
   font-size: 18px;
   line-height: 1.7;

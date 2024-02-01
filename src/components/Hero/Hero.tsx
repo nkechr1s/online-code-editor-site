@@ -7,7 +7,7 @@ const Hero = ({ title, description, buttonText, linkUrl }: HeroProps) => {
     <div className={styles.hero}>
       <div className={styles.heroCol}>
         <Heading variant="h1" dangerouslySetInnerHTML={true} text={title} />
-        <Heading variant="h3" text={description} />
+        <Heading variant="h2" text={description} />
         <div className={styles.heroFeatures}>
           <Button
             variant="primary"
