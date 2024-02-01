@@ -5,12 +5,11 @@ import styles from "./CardsGrid.module.css";
 const CardsGrid = ({ cardsData }: any) => {
   return (
     <>
-      {cardsData && (
+      {Array.isArray(cardsData) && (
         <div className={styles.gridContainer}>
-          {Array.isArray(cardsData) &&
-            cardsData.map((card, index) => (
-              <Card key={index + card.id} {...card} />
-            ))}
+          {cardsData.map((card, index) => (
+            <Card key={index + card.id} {...card} />
+          ))}
         </div>
       )}
     </>
