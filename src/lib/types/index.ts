@@ -40,7 +40,17 @@ export interface HasOwnPropertyFunction {
 export interface GlobalDataProps {
   headerData: HeaderProps;
   heroData: HeroProps;
+  cardsData: CardProps[];
 }
 export interface GlobalProviderProps {
   children: ReactNode;
+}
+
+export interface CardProps {
+  id:number,
+  title: string;
+  subTitle: string;
+  description: string;
+  imgUrl: string;
+  imgAlt: string;
 }

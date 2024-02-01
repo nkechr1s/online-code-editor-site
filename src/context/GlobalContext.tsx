@@ -2,6 +2,7 @@
 import { createContext, useContext } from "react";
 import { data as headerData } from "src/lib/data/headerData";
 import { data as heroData } from "src/lib/data/heroData";
+import { cardsData } from "src/lib/data/cardsData";
 import { GlobalDataProps, GlobalProviderProps } from "src/lib/types";
 
 const GlobalContext = createContext<GlobalDataProps | undefined>(undefined);
@@ -18,6 +19,7 @@ export const GlobalProvider = ({ children }: GlobalProviderProps) => {
   const globalData: GlobalDataProps = {
     headerData,
     heroData,
+    cardsData,
   };
 
   return (

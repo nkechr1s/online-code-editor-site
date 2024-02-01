@@ -1,8 +1,9 @@
-import { HeroHomePage } from "src/containers";
+import { HeroHomePage, CartsGrid } from "src/containers";
 const Home = () => {
   return (
     <>
       <HeroHomePage />
+      <CartsGrid />
     </>
   );
 };

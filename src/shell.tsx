@@ -8,7 +8,9 @@ const Shell = () => {
     <GlobalProvider>
       <Header />
       <main className="container">
-        <RouterProvider router={router} />
+        <div className="w-full">
+          <RouterProvider router={router} />
+        </div>
       </main>
       <Footer />
     </GlobalProvider>
