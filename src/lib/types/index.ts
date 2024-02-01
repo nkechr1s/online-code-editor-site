@@ -47,10 +47,14 @@ export interface GlobalProviderProps {
 }
 
 export interface CardProps {
-  id:number,
+  id: number;
   title: string;
   subTitle: string;
   description: string;
   imgUrl: string;
   imgAlt: string;
+}
+
+export interface CardsGridProps {
+  cardsData: CardProps[];
 }

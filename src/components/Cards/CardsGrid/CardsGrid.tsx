@@ -1,8 +1,8 @@
 import { Card } from "src/components";
 import styles from "./CardsGrid.module.css";
+import { CardsGridProps } from "src/lib/types";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CardsGrid = ({ cardsData }: any) => {
+const CardsGrid = ({ cardsData }: CardsGridProps) => {
   return (
     <>
       {Array.isArray(cardsData) && (
