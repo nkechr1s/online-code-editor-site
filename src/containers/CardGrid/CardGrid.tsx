@@ -1,8 +1,8 @@
 import { Card } from "src/components";
-import styles from "./CartsGrid.module.css";
+import styles from "./CardGrid.module.css";
 import { useGlobalContext } from "src/context/GlobalContext";
 
-const CartsGrid = () => {
+const CardGrid = () => {
   const { cardsData } = useGlobalContext();
   return (
     <div className={styles.gridContainer}>
@@ -22,4 +22,4 @@ const CartsGrid = () => {
   );
 };
 
-export default CartsGrid;
+export default CardGrid;
