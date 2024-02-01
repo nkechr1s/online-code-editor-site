@@ -1,9 +1,8 @@
 import { Card } from "src/components";
-import styles from "./CardGrid.module.css";
-import { useGlobalContext } from "src/context/GlobalContext";
+import styles from "./CardsGrid.module.css";
 
-const CardGrid = () => {
-  const { cardsData } = useGlobalContext();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CardsGrid = ({ cardsData }: any) => {
   return (
     <div className={styles.gridContainer}>
       {Array.isArray(cardsData) &&
@@ -22,4 +21,4 @@ const CardGrid = () => {
   );
 };
 
-export default CardGrid;
+export default CardsGrid;
