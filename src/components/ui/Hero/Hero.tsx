@@ -1,6 +1,6 @@
 import styles from "./Hero.module.css";
 import { HeroProps } from "src/lib/types";
-import { Button, Heading } from "src/components/ui";
+import { Button, Heading } from "src/components/basic";
 
 const Hero = ({ title, description, buttonText, linkUrl }: HeroProps) => {
   return (

@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 import { CardProps } from "src/lib/types";
-import { Heading } from "src/components/ui";
+import { Heading } from "src/components/basic";
 
 const Card = ({ id, title, description, imgUrl, imgAlt }: CardProps) => {
   return (

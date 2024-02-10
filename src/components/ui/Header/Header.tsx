@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import { HeaderProps } from "src/lib/types";
-import { Heading } from "src/components/ui";
+import { Heading } from "src/components/basic";
 
 const Header = ({ title }: HeaderProps) => {
   return (
